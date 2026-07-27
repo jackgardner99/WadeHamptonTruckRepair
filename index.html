@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wade Hampton Truck Repair LLC | Diesel &amp; Heavy Truck Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1C2A3A;
+    --navy-2:#233246;
+    --cream:#F1E6D0;
+    --cream-dim:#E4D6B8;
+    --crimson:#9B2A24;
+    --crimson-dark:#7A211D;
+    --gold:#D9C28C;
+    --charcoal:#241F1A;
+    --gray:#8C8471;
+    --line: rgba(217,194,140,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--cream);
+    color:var(--charcoal);
+    line-height:1.6;
+  }
+  h1,h2,h3{
+    font-family:'Alfa Slab One', serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+  }
+  .eyebrow{
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    letter-spacing:0.16em;
+    font-weight:600;
+    text-transform:uppercase;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  .ribbon{
+    height:14px;
+    background:repeating-linear-gradient(
+      -45deg, var(--crimson-dark) 0 8px, var(--crimson) 8px 16px
+    );
+    border-top:2px solid var(--gold);
+    border-bottom:2px solid var(--gold);
+  }
+
+  header{
+    background:var(--navy);
+    color:var(--cream);
+    position:sticky; top:0; z-index:10;
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:12px; padding-bottom:12px;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{height:48px; width:auto;}
+  .brand .name{font-family:'Alfa Slab One', serif; font-size:15px; line-height:1.2; color:var(--cream);}
+  .brand .name span{display:block; color:var(--gold); font-size:11px; letter-spacing:0.1em; font-family:'Oswald',sans-serif; font-weight:600; margin-top:2px;}
+  .header-cta{display:flex; align-items:center; gap:14px;}
+  .phone-link{font-family:'Oswald', sans-serif; font-size:16px; font-weight:600; color:var(--gold); white-space:nowrap;}
+  .btn{
+    display:inline-block; font-family:'Oswald', sans-serif; font-weight:600; font-size:13px;
+    letter-spacing:0.05em; text-transform:uppercase; padding:12px 22px;
+    border:2px solid var(--crimson); color:var(--crimson); background:transparent; cursor:pointer;
+    text-decoration:none; transition:background .15s ease, color .15s ease;
+  }
+  .btn:hover{background:var(--crimson); color:var(--cream);}
+  .btn-solid{background:var(--crimson); color:var(--cream); border-color:var(--crimson);}
+  .btn-solid:hover{background:transparent; color:var(--crimson);}
+  .btn-gold{border-color:var(--gold); color:var(--gold);}
+  .btn-gold:hover{background:var(--gold); color:var(--navy);}
+
+  .hero{background:var(--navy); color:var(--cream); padding:64px 0 60px; position:relative;}
+  .hero .wrap{display:grid; grid-template-columns:1.2fr 0.8fr; gap:40px; align-items:center;}
+  .hero .eyebrow{color:var(--gold); margin-bottom:14px;}
+  .hero h1{font-size:clamp(30px, 4.4vw, 48px); line-height:1.15; margin-bottom:20px;}
+  .hero p{color:var(--cream-dim); max-width:480px; font-size:16px; margin-bottom:32px; font-family:'Inter', sans-serif; text-transform:none;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  .hero-badge{display:flex; justify-content:center;}
+  .hero-badge img{max-width:280px; width:100%;}
+
+  .trust{background:var(--navy-2); border-top:1px solid var(--line);}
+  .trust .wrap{display:grid; grid-template-columns:repeat(4, 1fr);}
+  .trust-item{padding:26px 16px; text-align:center; border-left:1px solid var(--line); color:var(--cream);}
+  .trust-item:first-child{border-left:none;}
+  .trust-item .num{font-family:'Alfa Slab One', serif; font-size:24px; color:var(--gold);}
+  .trust-item .label{font-family:'Oswald',sans-serif; font-size:11px; color:var(--gray); text-transform:uppercase; letter-spacing:0.08em; margin-top:6px;}
+
+  .services{padding:68px 0;}
+  .section-head{margin-bottom:36px; max-width:560px;}
+  .section-head .eyebrow{color:var(--crimson); margin-bottom:10px;}
+  .section-head h2{font-size:clamp(24px, 3vw, 32px); color:var(--navy);}
+  .grid3{display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--gold); border:1px solid var(--gold);}
+  .service-card{background:var(--cream); padding:26px 22px;}
+  .service-card .icon{
+    width:38px; height:38px; border:2px solid var(--crimson); color:var(--crimson);
+    display:flex; align-items:center; justify-content:center; font-family:'Alfa Slab One', serif;
+    font-size:13px; margin-bottom:16px;
+  }
+  .service-card h3{font-size:16px; margin-bottom:8px; color:var(--navy);}
+  .service-card p{font-size:14px; color:#5A5346; font-family:'Inter',sans-serif; text-transform:none;}
+
+  .split{background:var(--navy); padding:68px 0;}
+  .split .wrap{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start;}
+  .quote-block .eyebrow{color:var(--gold); margin-bottom:14px;}
+  blockquote{font-family:'Alfa Slab One', serif; font-size:20px; line-height:1.4; color:var(--cream); margin-bottom:18px;}
+  .cite{color:var(--gray); font-size:13px; font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.05em;}
+
+  form{background:var(--cream); padding:30px; border-top:5px solid var(--crimson);}
+  form h3{font-size:18px; color:var(--navy); margin-bottom:6px;}
+  form .sub{font-size:13px; color:#5A5346; margin-bottom:20px; font-family:'Inter',sans-serif; text-transform:none;}
+  .field{margin-bottom:16px;}
+  label{display:block; font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:#5A5346; margin-bottom:6px;}
+  input, select, textarea{
+    width:100%; font-family:'Inter', sans-serif; font-size:15px; padding:11px 12px;
+    border:1px solid var(--cream-dim); background:#fff; color:var(--charcoal);
+  }
+  textarea{resize:vertical; min-height:88px;}
+  input:focus, select:focus, textarea:focus{outline:none; border-color:var(--crimson);}
+  form .btn{width:100%; text-align:center;}
+
+  .emergency{background:var(--crimson);}
+  .emergency .wrap{padding:16px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+  .emergency strong{font-family:'Alfa Slab One', serif; color:var(--cream); font-size:15px;}
+  .emergency span{color:var(--cream-dim); font-family:'Inter',sans-serif; text-transform:none;}
+  .emergency .btn{border-color:var(--cream); color:var(--cream);}
+  .emergency .btn:hover{background:var(--cream); color:var(--crimson);}
+
+  footer{background:var(--navy); color:var(--gray); padding:28px 0; font-size:13px; border-top:1px solid var(--line);}
+  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+  footer a{color:var(--gold); text-decoration:none;}
+  footer a:hover{color:var(--cream);}
+
+  @media (max-width: 800px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-badge{order:-1;}
+    .trust .wrap{grid-template-columns:repeat(2,1fr);}
+    .trust-item:nth-child(3){border-left:none;}
+    .grid3{grid-template-columns:1fr;}
+    .split .wrap{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="photos/wade-hampton-logo.png" alt="Wade Hampton Truck Repair logo">
+      <div class="name">Wade Hampton<span>Truck Repair LLC</span></div>
+    </div>
+    <div class="header-cta">
+      <a href="tel:+17062482289" class="phone-link">(706) 248-2289</a>
+      <a href="#quote" class="btn btn-gold">Request quote</a>
+    </div>
+  </div>
+</header>
+<div class="ribbon"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Diesel &amp; heavy truck repair</div>
+      <h1>Your fleet doesn't stop.<br>Neither do we.</h1>
+      <p>Wade Hampton Truck Repair keeps diesel engines, trailers, and heavy-duty fleets running — with 24/7 roadside response and ASE-certified techs who know the job.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-solid">Request a quote</a>
+        <a href="tel:+15550194482" class="btn btn-gold">Call (706) 248-2289</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <img src="photos/wade-hampton-logo.png" alt="Wade Hampton Truck Repair badge">
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item"><div class="num">24/7</div><div class="label">Roadside calls</div></div>
+    <div class="trust-item"><div class="num">20+ yrs</div><div class="label">Experience</div></div>
+    <div class="trust-item"><div class="num">ASE</div><div class="label">Certified techs</div></div>
+    <div class="trust-item"><div class="num">Mobile</div><div class="label">On-site repair</div></div>
+  </div>
+</div>
+
+<section class="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we handle</div>
+      <h2>Full-service diesel repair</h2>
+    </div>
+    <div class="grid3">
+      <div class="service-card">
+        <div class="icon">EN</div>
+        <h3>Engine repair</h3>
+        <p>Diagnostics, rebuilds, and preventive maintenance for diesel engines of every make.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">DX</div>
+        <h3>Diagnostics</h3>
+        <p>Computer diagnostics that pinpoint the problem fast, so your truck spends less time in the bay.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">RS</div>
+        <h3>Roadside &amp; fleet</h3>
+        <p>24/7 mobile response for breakdowns, plus scheduled fleet maintenance contracts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="wrap">
+    <div class="quote-block">
+      <div class="eyebrow">From the road</div>
+      <blockquote>"Had a truck down on I-40 at 2am — they had a tech out within the hour. Back on the road by sunrise."</blockquote>
+      <div class="cite">— Fleet manager, regional freight carrier</div>
+    </div>
+
+    <form id="quote" action="https://formsubmit.co/wadebortle23@gmail.com" method="POST">
+      <h3>Request a quote</h3>
+      <div class="sub">Tell us what's going on — we'll get back to you fast.</div>
+
+      <input type="hidden" name="_subject" value="New quote request — Wade Hampton Truck Repair">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="Phone" required>
+      </div>
+      <div class="field">
+        <label for="truck">Truck / equipment</label>
+        <input type="text" id="truck" name="Truck / equipment" placeholder="Make, model, year">
+      </div>
+      <div class="field">
+        <label for="issue">What's the issue?</label>
+        <textarea id="issue" name="Issue" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid">Send request</button>
+    </form>
+  </div>
+</section>
+
+<div class="emergency">
+  <div class="wrap">
+    <div><strong>Truck down right now?</strong> <span>We run roadside calls 24/7.</span></div>
+    <a href="tel:+15550194482" class="btn">Call (706) 248-2289</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Wade Hampton Truck Repair LLC</span>
+    <div style="display:flex; gap:20px;">
+      <a href="tel:+15550194482">(706) 248-2289</a>
+      <a href="#quote">Request quote</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
